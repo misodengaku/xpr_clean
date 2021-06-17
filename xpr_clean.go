@@ -3,7 +3,6 @@ package main
 import (
 	"encoding/xml"
 	"flag"
-	"fmt"
 	"io/ioutil"
 	"os"
 	"path/filepath"
@@ -197,13 +196,11 @@ func main() {
 		for _, v := range project.MsgRule[i].MsgAttr {
 			if v.Name == "RuleId" {
 				key1 = v.Val
-				fmt.Println("1", key1)
 			}
 		}
 		for _, v := range project.MsgRule[j].MsgAttr {
 			if v.Name == "RuleId" {
 				key2 = v.Val
-				fmt.Println("2", key2)
 			}
 		}
 		return key1 < key2
