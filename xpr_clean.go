@@ -217,5 +217,5 @@ func main() {
 	if err != nil {
 		panic("marshal failed")
 	}
-	ioutil.WriteFile("uz_petalinux.xpr", d, os.ModePerm)
+	ioutil.WriteFile(flag.Arg(0), d, os.ModePerm)
 }
